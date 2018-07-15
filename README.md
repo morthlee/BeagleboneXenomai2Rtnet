@@ -2,6 +2,7 @@
 1.	下载内核源代码
 cd /home/用户名/Documents/bbb(将用户名替换为实际路径，bbb名字可更改，以下路径以此为准)
 git clone https://github.com/RobertCNelson/yakbuild
+
 cd ./yakbuild/
 2.	配置所需要下载的内核版本
 cp recipe.sh.sample recipe.sh
