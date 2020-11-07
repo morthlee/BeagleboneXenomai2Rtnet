@@ -101,7 +101,7 @@ insmod rtudp.ko
 
 至此完成rt_ticpsw网卡驱动模块的加载
 
-../sbin/rtifconfig eteth0 up
+../sbin/rtifconfig rteth0 up
 
 此时网卡可用，完成整个流程。
 
