@@ -2,7 +2,7 @@ Beaglebone Black板安装Linux3.8.13 + Xenomai 2.6.13 + Rtnet全记录
 
 一 实时补丁准备
 
-1.1: 下载https://github.com/RobertCNelson/bb-kernel/tree/3.8.13-xenomai,解压至~/bbbkernel/bb-kernel-3.8.13-xenomai；（git标签过时了所以不建议采用git clone）
+1.1: 下载https://github.com/RobertCNelson/bb-kernel/tree/3.8.13-xenomai, 解压至~/bbbkernel/bb-kernel-3.8.13-xenomai；（git标签过时了所以不建议采用git clone）
 
 1.2： 修改~/bbbkernel/bb-kernel-3.8.13-xenomai/system.sh, 设置LINUX_GIT=~/bbbkernel/bb-kernel-3.8.13-xenomai/ignore/linux/；
 
@@ -63,18 +63,27 @@ linux-libc-dev_1cross_armhf.deb
 3.2 设置wifi:
 
 sudo connmanctl
+
  tether wifi disable
+ 
  enable wifi
+ 
  scan wifi
+ 
  services
+ 
  agent on
+ 
  connect  <WIFI信息>
+ 
  Passphrase? <输入WIFI密码>
+ 
  quit
  
 3.3 然后将上一步骤得到的几个deb包通过SSH上传至BBB板子内，假设放在/home路径下，按照如下步骤进行安装:
 
 cd /home
+
 sudo dpkg -i *.deb
 
 安装完之后reboot,重新连接BBB板子，至此完成BBB板子的实时内核更换，输入uname -r 可以看到3.8.13-xenomai-r86， 输入cat /proc/xenomai/version 可以看到2.6.3
