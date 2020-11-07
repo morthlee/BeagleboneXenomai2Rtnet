@@ -9,9 +9,9 @@ cd ./yakbuild/
 
 2.	配置所需要下载的内核版本
 
-cp recipe.sh.sample recipe.sh
+cp recipe.sh.v3.8.x.sample recipe.sh
 
-将所得到的 recipe.sh文件内的kernel_tag设置为kernel_tag="3.8.13-xenomai-r83" 
+将所得到的 recipe.sh文件内的kernel_tag设置为kernel_tag="3.8.13-xenomai-r84" 
 
 3.	./build_deb.sh下载内核代码后开始编译，首先会进入内核编译选项配置界面，按照如下选项进行设置：
 
