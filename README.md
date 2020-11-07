@@ -3,9 +3,13 @@ Beaglebone Black板安装Linux3.8.13 + Xenomai 2.6.13 + Rtnet全记录
 一 实时补丁准备
 
 1.1: 下载https://github.com/RobertCNelson/bb-kernel/tree/3.8.13-xenomai,解压至~/bbbkernel/bb-kernel-3.8.13-xenomai；（git标签过时了所以不建议采用git clone）
+
 1.2： 修改~/bbbkernel/bb-kernel-3.8.13-xenomai/system.sh, 设置LINUX_GIT=~/bbbkernel/bb-kernel-3.8.13-xenomai/ignore/linux/；
+
 1.3： 解压~/bbbkernel/bb-kernel-3.8.13-xenomai/ignore/linux.zip. linux.zip由git clone https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git得到
+
 1.4： 修改~/bbbkernel/bb-kernel-3.8.13-xenomai/scripts/git.sh，修改xenomai_2_6="https://gitlab.denx.de/Xenomai/xenomai.git"
+
 1.5： 执行~/bbbkernel/bb-kernel-3.8.13-xenomai/build_deb.sh，开始编译，首先会进入内核编译选项配置界面，按照如下选项进行设置：
 
 Power management options  --->
