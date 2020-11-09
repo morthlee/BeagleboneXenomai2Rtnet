@@ -2,7 +2,7 @@ Beaglebone Black板安装Linux3.8.13 + Xenomai 2.6.13 + Rtnet全记录
 
 一 实时补丁准备
 
-1.1: 下载https://github.com/RobertCNelson/bb-kernel/tree/3.8.13-xenomai, 解压至~/bbbkernel/bb-kernel-3.8.13-xenomai；（git标签过时了所以不建议采用git clone）
+1.1: 下载https://github.com/RobertCNelson/bb-kernel/tree/3.8.13-xenomai, 解压至~/bbbkernel/bb-kernel-3.8.13-xenomai；
 
 1.2： 修改~/bbbkernel/bb-kernel-3.8.13-xenomai/system.sh, 设置LINUX_GIT=~/bbbkernel/bb-kernel-3.8.13-xenomai/ignore/linux/；
 
