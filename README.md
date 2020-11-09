@@ -1,4 +1,4 @@
-Beaglebone Black板安装Linux3.8.13 + Xenomai 2.6.13 + Rtnet全记录
+Set up of EtherCAT master on Beaglebone Black Board under the config : Linux3.8.13 + Xenomai 2.6.3 + Rtnet
 
 一 实时补丁准备
 
@@ -51,7 +51,7 @@ linux-libc-dev_1cross_armhf.deb
 
 2.1 将镜像文件bone-debian-8.7-machinekit-armhf-2017-02-12-4gb.img.xz烧录到 sd 卡。在 ubuntu 下面使用命令：
     sudo -s
-    xz -dkc bone-debian-8.7-console-armhf-2017-01-23-2gb.img.xz > /dev/sdX (sdX 代表 SD 卡，具体怎么看可以百度一下，我用 gparted 看的)
+    xz -dkc bone-debian-8.7-console-armhf-2017-01-23-2gb.img.xz > /dev/sdX (X替换为具体设备号)
     exit
 2.2 默认烧录之后只分配了 2GB 的空间，剩余的没有分配，所以需要用 gparted 调整一下sd 卡的空间，没有安装的就 sudo apt-get install gparted 即可
 2.3 将 SD 卡插入 bbb,按住 s2 按钮，上电直到 4 盏 led 灯全亮再松开 s2 按钮，此时 bbb 应该能够从 SD 卡正常启动
@@ -127,9 +127,6 @@ insmod rt_ticpsw.ko
 
 insmod rtpacket.ko
 
-insmod rtipv4.ko
-
-insmod rtudp.ko
 
 至此完成rt_ticpsw网卡驱动模块的加载
 
