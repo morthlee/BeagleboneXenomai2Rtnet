@@ -1,4 +1,4 @@
-Set up of EtherCAT master on Beaglebone Black Board under the config : Linux3.8.13 + Xenomai 2.6.3 + Rtnet
+Set up RTOS for EtherCAT master on Beaglebone Black Board under the config : Linux3.8.13 + Xenomai 2.6.3 + Rtnet
 
 一 实时补丁准备
 
